@@ -19,7 +19,16 @@ This repository implements a minimal deep learning core framework that includes:
 The code is intentionally **simple, readable, and modular** — making it perfect for understanding the internal mechanics of backpropagation and gradient descent.
 
 ---
+## 📦 Installation
 
+#### **Option 1: Install via GitHub**
+
+```bash
+git clone https://github.com/your-username/Autograd-engine-scalar-automatic-differentiation-engine.git
+cd Autograd-engine-scalar-automatic-differentiation-engine
+pip install .
+```
+----
 ## 📂 Project Structure
 
 ```
