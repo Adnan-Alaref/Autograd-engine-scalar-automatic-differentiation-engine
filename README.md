@@ -24,7 +24,7 @@ The code is intentionally **simple, readable, and modular** — making it perfec
 #### **Option 1: Install via GitHub**
 
 ```bash
-git clone https://github.com/your-username/Autograd-engine-scalar-automatic-differentiation-engine.git
+git clone https://github.com/Adnan-Alaref/Autograd-engine-scalar-automatic-differentiation-engine.git
 cd Autograd-engine-scalar-automatic-differentiation-engine
 pip install .
 ```
