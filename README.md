@@ -2,7 +2,7 @@
 
 A lightweight, educational, and fully functional automatic differentiation engine built from scratch using pure Python — **inspired by the design philosophy of micrograd by Andrej Karpathy**, but **extended with Torch-like features, dynamic learning rate, and graph visualization.**
 
-Unlike micrograd, this implementation introduces PyTorch-inspired design patterns, including a Module hierarchy, dynamic forward graph construction, integrated activation functions, and adaptive learning rate logic.
+Unlike micrograd, this implementation introduces **PyTorch-inspired design patterns, including a Module hierarchy, dynamic forward graph construction, integrated activation functions, and adaptive learning rate logic.**
 It bridges the gap between simplicity and modern deep learning framework structure — giving learners both transparency and realistic functionality.
 
 ---
@@ -118,14 +118,14 @@ model = MLP(nin=3, nouts=[4, 4, 1], act_func="relu")
 
 ---
 
-### **3. Graph Visualization (graph.py)**
+### **3. Graph Visualization (build_graph.py)**
 
 Uses **Graphviz** to render the computational graph created during forward and backward passes.
 
 #### Example
 
 ```python
-from autograd.graph import draw_graph
+from autograd.build_graph import draw_graph
 from autograd.engine import Value
 
 x = Value(2.0, label='x')
