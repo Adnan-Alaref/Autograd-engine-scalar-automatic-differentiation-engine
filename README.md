@@ -139,46 +139,39 @@ from autograd.engine import Value
 
 x = Value(2.0, label='x')
 y = Value(3.0, label='y')
-z = x * y + x.relu()
-z.backward()
+z = x * y ; z.label='z'
+e = z + x.relu(); e.label='e'
+e.backward()
 
-dot = draw_graph(z)
+dot = draw_graph(e)
 dot.render("graph", view=True)
 ```
+<p align="center">
+  <img width="1093" height="133" alt="graph_output" src="https://github.com/user-attachments/assets/676b37ae-7b94-461b-b676-16aaaae15094" />
+</p>
 
 Output: A clean, left-to-right computational graph showing nodes, operations, data, and gradients.
 
 ---
 
-## 🧪 Example: Training a Tiny Neural Network
 
-```python
-from autograd.nn import MLP
-from autograd.engine import Value
+## 🧪 demo.ipynb — End-to-End Training Example
 
-# Dummy dataset
-X = [
-  [Value(2.0), Value(3.0), Value(-1.0)],
-  [Value(3.0), Value(-1.0), Value(0.5)],
-]
-Y = [Value(1.0), Value(-1.0)]
+The **`demo.ipynb`** notebook provides a **complete walkthrough** of training a **2-layer neural network (MLP)** for **binary classification** using this custom-built `autograd` engine.
 
-model = MLP(nin=3, nouts=[4, 4, 1], act_func="tanh")
+In this demo, we:
 
-for epoch in range(100):
-    total_loss = Value(0.0)
-    for x, y in zip(X, Y):
-        pred = model(x)
-        loss = (pred - y)**2
-        total_loss += loss
+1. Initialize a neural network using the `autograd.nn` module.  
+2. Implement a simple **SVM-style "max-margin" loss** function for binary classification.  
+3. Train the model using **stochastic gradient descent (SGD)**.  
+4. Visualize the **decision boundary** learned by the model on the **two-moons dataset**.
 
-    model.zero_grad()
-    total_loss.backward()
-    model.update(total_loss)
+By training a **2-layer MLP** with **two hidden layers of 20 neurons each**, the network successfully separates the nonlinear classes and produces a smooth decision boundary — demonstrating that even this minimal scalar-based autograd engine can perform effective deep learning tasks.
 
-    if epoch % 10 == 0:
-        print(f"Epoch {epoch:03d} | Loss: {total_loss.data:.4f} | LR: {model.lr:.5f}")
-```
+<p align="center">
+ <img width="989" height="490" alt="disagine_bounary" src="https://github.com/user-attachments/assets/800439e9-b1bc-43fb-ad1e-d4225056d30e" />
+</p>
+
 
 ---
 
