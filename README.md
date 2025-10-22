@@ -2,7 +2,7 @@
 
 A lightweight, educational, and fully functional automatic differentiation engine built from scratch using pure Python — **inspired by the design philosophy of micrograd by karpathy (Special thanks to [karpathy](https://github.com/karpathy) for the inspiration!)**, but **extended with Torch-like features, dynamic learning rate, and graph visualization.**
 
-Unlike micrograd, this implementation introduces **PyTorch-inspired design patterns, including a Module hierarchy, dynamic forward graph construction, integrated activation functions, and adaptive learning rate logic.**
+This implementation introduces **PyTorch-inspired design patterns, including a Module hierarchy, dynamic forward graph construction, integrated activation functions, and adaptive learning rate logic.**
 It bridges the gap between simplicity and modern deep learning framework structure — giving learners both transparency and realistic functionality.
 
 ---
