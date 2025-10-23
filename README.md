@@ -46,6 +46,17 @@ autoGrad/
 
 ---
 
+## 🚀 Features
+* **Dynamic Computational Graph** — builds and executes on-the-fly during forward passes.
+* **Backward Propagation** — efficient recursive gradient computation via __`.backward()`__.
+* **Supports Elementary Operations** — addition, multiplication, power, trigonometric, ReLU, sigmoid, etc.
+* **Memory Efficient** — uses __`slots`__ for faster attribute access and reduced footprint.
+* **Manual Gradient Control** — toggle gradient tracking with __`Value.grad_enabled`__.
+* **Visualization Support** — generates computational graph visualizations using Graphviz.
+
+---
+
+
 ## ⚙️ Core Components
 
 ### **1. `Value` (engine.py)**
@@ -200,14 +211,25 @@ pip install graphviz torch
 
 ---
 
-## 🧩 Future Improvements
+## 💡 Future Extensions
 
-* Add mini-batch data loaders  
-* Integrate support for vectorized `Value` arrays  
-* Implement optimizers (SGD, Adam)  
-* Extend visualization with color-coded gradients
+* Vectorized operations (NumPy backend).
+* Add mini-batch data loaders. 
+* Implement optimizers (SGD, Adam).  
+* Extend visualization with color-coded gradients.
 
 ---
+
+## 🧑‍💻 Author Notes
+
+This engine is a fully functional micro-autograd system, perfect for:
+* Educational purposes.
+* Understanding backpropagation mechanics.
+* Experimenting with building neural network frameworks from scratch.
+>“Understanding autograd at the scalar level is the best way to demystify deep learning.”
+
+---
+
 
 ## 🧑‍💻 Author
 
