@@ -4,7 +4,7 @@ setup(
     name="autograd-engine",
     version="1.0.0",
     author="Adnan Alaref",
-    author_email="adnanalaref27@example.com",  # optional, you can remove or replace
+    author_email="adnanalaref27@example.com",  
     description=(
         "A lightweight, educational, and fully functional automatic differentiation engine "
         "built from scratch in pure Python — inspired by micrograd but extended with "
@@ -12,7 +12,7 @@ setup(
     ),
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/Adnan-Alaref/Autograd-engine-scalar-automatic-differentiation-engine.git",  # change this to your repo URL
+    url="https://github.com/Adnan-Alaref/Autograd-engine-scalar-automatic-differentiation-engine.git",
     packages=find_packages(),
     install_requires=[
         "graphviz>=0.20",
