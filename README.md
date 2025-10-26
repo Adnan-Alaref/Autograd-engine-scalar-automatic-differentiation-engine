@@ -39,8 +39,7 @@ Directory structure:
     ├── setup.py
     ├── demo.ipynb            # Example training script
     ├── demo_draw_graph.ipynb # Example build computational graph
-    ├── test_engine.ipynb
-    ├── graph_output.png # Example visualization
+    ├── test_engine.ipynb     
     └── autograd/
         ├── __init__.py
         ├── build_graph.py # Graphviz-based computational graph rendering
