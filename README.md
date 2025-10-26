@@ -32,16 +32,20 @@ pip install .
 ## 📂 Project Structure
 
 ```
-autoGrad/
-│
-├── engine.py        # Core Value and Module classes
-├── nn.py            # Module, Neuron, Layer, and MLP definitions
-├── build_graph.py   # Graphviz-based computational graph rendering
-├── examples/
-│   └── demo.ipynb            # Example training script
-│   └── demo_draw_graph.ipynb # Example build computational graph
-├── graph_output.png # Example visualization
-└── README.md
+Directory structure:
+└── adnan-alaref-autograd-engine-scalar-automatic-differentiation-engine/
+    ├── README.md
+    ├── LICENSE
+    ├── setup.py
+    ├── demo.ipynb            # Example training script
+    ├── demo_draw_graph.ipynb # Example build computational graph
+    ├── test_engine.ipynb
+    ├── graph_output.png # Example visualization
+    └── autograd/
+        ├── __init__.py
+        ├── build_graph.py # Graphviz-based computational graph rendering
+        ├── engine.py   # Core Value and Module classes
+        └── nn.py       # Module, Neuron, Layer, and MLP definitions
 ```
 
 ---
